@@ -1,10 +1,4 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { fetchCount } from './counterAPI';
-
-const initialState = {
-  value: 0,
-  status: 'idle',
-};
+import { createSlice } from '@reduxjs/toolkit';
 
 export const userSlice = createSlice({
   name: 'user',
@@ -13,7 +7,7 @@ export const userSlice = createSlice({
   },
   reducers: {
     login: (state, action) => {
-      state.value = action.payload;
+      state.user = action.payload;
     },
     logout: (state) => {
       state.user = null;
